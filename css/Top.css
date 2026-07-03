@@ -1,0 +1,107 @@
+/* ウィンドウ端の余白を消す */
+html, body {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* ヘッダーの背景設定*/
+.global-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8vh;
+    z-index: 1000;
+    
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+
+    display: flex;
+    justify-content: center;
+}
+
+/*ボタンの表示領域の設定 */
+.header-nav {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
+}
+
+/* ボタンの配置の設定 */
+.nav-list {
+    display: flex;
+    list-style: none;
+    flex: 1;
+}
+.nav-list.left {
+    justify-content: space-between;
+    padding-right: 4%;
+}
+.nav-list.right {
+    justify-content: space-between;
+    padding-left: 4%;
+}
+
+.header-title {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header-title img {
+    height: 8vh;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* 各ボタンの文字スタイル */
+.nav-item {
+    font-weight: 600;
+    white-space: nowrap;
+    font-size: clamp(12px, 1.2vw, 16px);
+}
+.nav-item a {
+    text-decoration: none;
+    color: #000000;
+}
+@media (max-width: 1200px) {
+    .nav-item {
+        font-size: clamp(1px, 1.33vw, 20px);
+    }
+}
+
+
+
+
+/* キービジュアル */
+.key-visual{
+    position: relative;
+    display: block;
+    top: 8vh;
+    width: 100vw;
+    height: 100vh; 
+    
+    object-fit: cover;
+    object-position: center;
+}
+
+.background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+
+    display: flex;
+    object-fit: cover;
+    object-position: center;
+}
